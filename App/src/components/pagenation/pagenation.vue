@@ -1,5 +1,5 @@
 <template>
-<div class="pagesplit" :id="id">
+<div class="pagenation" :id="id">
   <div class="page" v-show="ispageShow">
     <div class="pagebox clearfloat">
       <button  class="prePage"  @click="currentIndex--" >上一页</button>
@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: "pagesplit",
+  name: "pagenation",
   props: {
     total: {
       //文章总数
@@ -44,8 +44,8 @@ export default {
   },
   data() {
     return {
-      id: `pagesplit&{Math.random()*10000}`,
-      currentIndex:  this.pageIndex, // 当前页码
+      id: `pagenation&{Math.random()*10000}`,
+      currentIndex: this.pageIndex, // 当前页码
       jumpNum: null // 跳转页
     };
   },
